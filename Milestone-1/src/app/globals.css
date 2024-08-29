@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #34e89e, #0f3443);
+  color: #ffffff;
+  text-align: center;
+  overflow: hidden;
+  animation: backgroundPulse 2s infinite alternate;
+}
+
+.milestone {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #ff6f61;
+  animation: rainbowText 2s ease-in-out infinite, bounce 1s ease-in-out infinite alternate;
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.helloWorld {
+  font-size: 4.5rem;
+  font-weight: bold;
+  animation: floatText 2s ease-in-out infinite alternate, slideIn 2s ease-in-out 1s forwards;
+  color: #ffd700;
+  opacity: 0;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes backgroundPulse {
+  0% {
+    background: linear-gradient(135deg, #34e89e, #0f3341);
+  }
+
+  50% {
+    background: linear-gradient(135deg, #0d2f3c, #34e89e);
+  }
+
+  100% {
+    background: linear-gradient(135deg, #34e89e, #0f3443);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes floatText {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rainbowText {
+  0% {
+    color: #ff6f61;
+  }
+
+  16% {
+    color: #ffcc00;
+  }
+
+  32% {
+    color: #00ffcc;
+  }
+
+  48% {
+    color: #00ccff;
+  }
+
+  64% {
+    color: #ff66ff;
+  }
+
+  80% {
+    color: #ccff66;
+  }
+
+  100% {
+    color: #ff6f61;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-20px);
+  }
+}
