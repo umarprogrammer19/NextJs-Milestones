@@ -1,0 +1,17 @@
+{
+	"compilerOptions": {    
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"target": "ESNext",
+		"types": ["vite/client"],
+		"isolatedModules": true,
+	},
+	"files": [],
+	"references": [
+		{
+			"path": "./tsconfig.app.json"
+		},
+		{
+			"path": "./tsconfig.node.json"
+		}
+	]
+}

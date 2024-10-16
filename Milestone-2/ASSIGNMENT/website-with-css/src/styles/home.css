@@ -1,0 +1,141 @@
+#homePage {
+	font-weight: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#homePage > #content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	max-width: 100%;
+	user-select: none;
+}
+
+#homePage > #content > #text {
+	font-size: 1.25em;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#homePage p {
+	font-family: Quicksand, 'Roboto', Helvetica, Arial, sans-serif;
+	font-weight: 200;
+	margin: 0 auto;
+	overflow: hidden;
+	animation: reveal 2s steps(35, end);
+	white-space: nowrap;
+	text-align: center;
+	display: inline-block;
+	animation-fill-mode: both;
+}
+
+#homePage p#l2 {
+	animation-delay: 2s;
+}
+
+#buttons {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+#downloadCV, #contact-me {
+	display: flex;
+	font-weight: 400;
+	width: 10em;
+	height: 4em;
+	border: ridge 0.2em var(--blue-dark);
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	line-height: 70px;
+	text-decoration: none;
+	transition: 0.1s ease-in-out;
+	animation: fadein-blur 1s 3.5s both;
+}
+
+#contact-me {
+	margin-bottom: 0.5em;
+}
+
+ #downloadCV:hover, #contact-me:hover{
+	color: white;
+	background-color: var(--blue-dark);
+}
+
+.night #downloadCV, .night #contact-me {
+	border-color: var(--blue-light);
+	&:hover {
+		background-color: var(--blue-light);
+		color: black;
+	}
+	cursor: pointer;
+}
+
+#links {
+	position: relative;
+	display: flex;
+	animation: fadein-blur 1s 3.5s both;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#homePage .fa-brands {
+	font-size: 2rem;
+	transition: 0.2s;
+	&:hover {transform: scale(1.25);}
+}
+
+@media (max-width:240px) {
+	#homePage #text {
+		font-size: 1em;
+	}
+}
+
+@media (max-width:480px) {
+	#homePage #buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+	#homePage #links {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	#homePage {
+		font-size: 2rem;
+	}
+	#homePage .fa-brands {
+		font-size: 2.25em;
+	}
+}
+
+@media (min-width:481px){
+	#homePage {
+		font-size: 1.5rem;
+	}
+	#links {
+		width: 100%;
+		justify-content: space-evenly;
+	}
+	#buttons {
+		display: flex;
+		justify-content: space-evenly;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	#downloadCV, #contact-me {
+		font-size: 1rem;
+	}
+	#homePage .fa-brands {
+		font-size: 1.5em;
+	}
+}

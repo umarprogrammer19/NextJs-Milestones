@@ -1,0 +1,69 @@
+#aboutPage {
+	display: flex;
+	flex-direction: column;
+	font-size: 0.9rem;
+}
+
+#aboutPage > #content {
+	display: flex;
+	flex-direction: column;
+	padding: 2em;
+}
+
+#summary, #details {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	animation: appear 0.5s ease-in 0.25s 1 normal both;
+}
+
+#summary-title, #details-title {
+	font-size: 1.25em;
+	margin-bottom: 0.2em;
+	font-weight:600;
+}
+
+span#summary-content {
+	text-align: justify;
+}
+
+table#details-table {
+	width: fit-content;
+	& th, & td {
+		text-align: left;
+		overflow-wrap: break-word;
+	}
+	/*& th {text-align: right;}*/
+	& .colon {
+		width:1em;
+		text-align: center;
+	}
+}
+
+img[alt='Subhranil Ghoshal'] {
+	height: clamp(10vmin, 7.5em, 30vmin);
+	width: clamp(10vmin, 7.5em, 30vmin);
+	margin: 0em 0em 0em 1em;
+	float: right;
+	animation: appear 0.5s ease-in 0.5s 1 normal both;
+	transition: filter 0.1s;
+}
+
+@media (max-aspect-ratio: 1/1) {
+	#aboutPage {
+		font-size: 2rem;
+	}
+}
+
+@media (min-width:768px) and (max-aspect-ratio: 1/1) {
+	#aboutPage {
+		font-size: 1.5rem;
+	}
+}
+
+/*For tablets in landscape mode which are almost squares*/
+@media (max-aspect-ratio: 1.4/1) and (min-aspect-ratio: 1/1) {
+	#aboutPage {
+		font-size: 1rem;
+	}
+}

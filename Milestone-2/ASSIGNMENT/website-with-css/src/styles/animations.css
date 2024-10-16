@@ -1,0 +1,89 @@
+@keyframes slidein {
+	from {transform:translateX(-100%)}
+	to {transform: translateX(0%);}
+}
+
+@keyframes slideup {
+	from {top: -100%; opacity: 0;}
+	to {top: 0%; opacity: 1;}
+}
+
+@keyframes slideout {
+	from {
+		transform: translateX(0%);
+	}
+	to {
+		transform: translateX(100%);
+	}
+}
+
+@keyframes fadeout {
+	from {opacity: 1; filter: blur(0px);}
+	to {opacity: 0; filter:blur(2em);}
+}
+
+@keyframes reveal {
+	from {width: 0;}
+	to {width: 100%;}
+}
+
+@keyframes appear {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes rotate-appear {
+	0% {
+		transform: rotate(360deg) scale(0);
+		opacity: 0;
+	}
+	50% {
+		transform: rotate(180deg) scale(0.5);
+		opacity: 0.5;
+	}
+	100% {
+		transform: rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes fadein-blur {
+	from {
+		opacity: 0;
+		filter: blur(1em);
+		visibility: hidden;
+	}
+	to {
+		opacity: 1;
+		filter: blur(0px);
+		visibility: visible;
+	}
+}
+
+@keyframes popup {
+	0% {scale: 50%;}
+	50% {scale: 120%;}
+	100% {scale: 100%; opacity: 1;}
+}
+
+@keyframes anim-dark {
+	0% {opacity: 1; scale: 1;}
+	50% {opacity: 0; scale: 0.5;}
+	100% {opacity: 1; scale: 1;}
+}
+@keyframes anim-light {
+	0% {opacity: 1; scale: 1;}
+	50% {opacity: 0; scale: 0.5;}
+	100% {opacity: 1; scale: 1;}
+}
+
+@keyframes fillbar {
+	0% {transform: translate3d(-100%,0,0)}
+	100% {transform: translate3d(0,0,0);}
+}

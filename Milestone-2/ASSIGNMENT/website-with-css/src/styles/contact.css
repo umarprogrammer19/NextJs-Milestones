@@ -1,0 +1,242 @@
+#contactPage {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+#contactPage h1 {
+	align-self: center;
+}
+
+#contactPage > #content {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+}
+
+#contactform, #socials {
+	display: flex;
+	height: 100%;
+	margin: 0em 1.5em 1.5em 1.5em;
+    flex-wrap: wrap;
+    align-content: space-around;
+	animation: appear 0.5s ease-in both;
+}
+
+#contactform {
+    min-width: 50%;
+    justify-content: flex-start;
+}
+
+#socials {
+	width: fit-content;
+	justify-content: flex-end;
+	float: right;
+}
+
+form#Form {
+	justify-content: center;
+	min-width: 75%;
+}
+
+#contactPage h3 {
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.formItem {
+	display: flex;
+	flex-direction: column;
+	margin: 1.25em 0 1.25em 0;
+	&#note {font-size: 1em;}
+	&#submitButton {margin: 0;}
+	&#head {margin-top:0;margin-bottom: 0.25em;}
+}
+
+:required+label::after{
+	content:'*';
+	color: red;
+}
+
+#Form span {font-size: 0.75em;}
+
+#sociallinks span#description {
+	display: block;
+	font-size: 0.75em;
+	margin: 0.5em;
+	margin-left: 0px;
+	& a {
+		display: inline;
+		margin-top: 0.75em;
+	}
+}
+
+span#star {color:red}
+
+input+label, #label-msgbox {
+	font-family: Garamond, 'Times New Roman', Times, serif;
+	font-size: 0.75em;
+	padding-left: 0.1em;
+	width: fit-content;
+	transition-duration: 0.1s;
+}
+
+input+label {
+	transform: translateY(-1.33em);
+}
+
+input, textarea {
+	font-family: Garamond, 'Times New Roman', Times, serif;
+	resize: none;
+	font-size: 0.75em;
+	background-color: transparent;
+	width: 100%;
+	&:focus {
+		outline: none;
+	}
+	&:focus+label {
+		color: var(--blue-dark);
+		cursor: default;
+		&::after{content: '';}
+	}
+	&:hover+label {
+		cursor: text;
+	}
+}
+
+input#submit {
+	font-size: 1em;
+	width: 8em;
+	height:2em;
+	align-self: center;
+}
+
+input:focus+label, input:not(:placeholder-shown)+label {
+	transform: translateY(-2.67em);
+	cursor:default;
+	&::after{content: '';}
+}
+
+input:required, textarea{
+	&:focus {border-color: var(--blue-dark);}
+}
+
+input:required {
+	border: none;
+	border-bottom: solid 2px black;
+}
+
+label#label-msgbox {
+	position: relative;
+	left: 1em;
+	transform: translateY(-7em);
+}
+
+textarea:focus+#label-msgbox, textarea:not(:placeholder-shown)+#label-msgbox {
+	transform: translateY(-8.5em) scale(0.8);
+	background-color: var(--bg);
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	cursor: default;
+	&::after{content: '';}
+}
+
+textarea:focus+#label-msgbox {
+	color: var(--blue-dark);
+}
+
+textarea {
+	height: 8em;
+	max-height: 8em;
+	border: solid 2px black;
+	border-radius: 1em;
+	padding: 1em;
+}
+
+input#submit {
+	color: white;
+	background-color: var(--blue-dark);
+	border: none;
+	&:active {filter: brightness(0.8);}
+}
+
+.night {
+	& input, & textarea {
+		border-color: var(--bg);
+		color: var(--bg);
+		&:focus+label {color: var(--blue-light)}
+		&:required:focus {border-color: var(--blue-light);}
+	}
+	& textarea:focus+#label-msgbox, textarea:not(:placeholder-shown)+#label-msgbox {
+		background-color: var(--bg-dark);
+	}
+	& textarea:focus+#label-msgbox {
+		color: var(--blue-light);
+	}
+	& input#submit {
+		color:black;
+		background-color: var(--blue-light);
+	}
+
+	& span#star, :required+label::after{
+		color: #ff7c7c;
+	}
+}
+
+#sociallinks {
+	width: 75%;
+}
+
+#sociallinks .fa-brands {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: transform 0.25s ease;
+	&:not(.fa-instagram){border-radius: 100%;}
+	&:hover {
+		transform: scale(1.5)
+	}
+}
+
+#sociallinks > a {
+	display: inline-block;
+	margin: 0.5em 0.5em 0em 0em;
+	text-decoration: none;
+	color: inherit;
+	font-size: 1.5rem;
+	text-align: center;
+	vertical-align:middle;
+}
+
+@media (max-width:480px) or ((max-aspect-ratio:1/1) and (min-width:480px)) {
+	#contactPage {
+		font-size: 2.25rem;
+	}
+	#contactPage > #content {
+		flex-direction: column;
+		justify-content: space-evenly;
+		& div#contactform {padding-top:0; padding-bottom: 0;}
+	}
+	#socials {
+		justify-content: center;
+		align-items:end;
+		height:fit-content;
+	}
+	#sociallinks {
+		width: 100%;
+		text-align: center;
+		& a:not([href='mailto:ghoshalsubhranil@gmail.com']) {font-size:1em;}
+		& h3 {display: none}
+	}
+	#contactform {
+		height:100%;
+		align-items:center;
+	}
+	form#Form {width:100%}
+}
+
+@media (max-aspect-ratio:1/1) and (min-width: 480px) {
+	#contactPage {
+		font-size: 2rem;
+	}
+}

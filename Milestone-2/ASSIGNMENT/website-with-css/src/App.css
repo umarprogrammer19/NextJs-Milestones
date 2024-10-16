@@ -1,0 +1,68 @@
+.centered {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.App {
+	background-color:light-dark(var(--bg), var(--bg-dark));
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	font-family: "Roboto", "Segoe UI", "Gill Sans MT", "Lucida Sans", "Helvetica", sans-serif;
+	z-index: 0;
+	overflow: auto;
+	transition-duration: 0.2s;
+	transition-property: color, background-color;
+	transition-timing-function: ease-in;
+	color-scheme: light;
+	
+	& .fa-brands {font-size:1em; height: 1em; width: 1em; line-height: normal;}
+	& .fa-quora {color: red;}
+	& .fa-github {color: black;}
+	& .fa-linkedin {color: rgb(0, 116, 179);}
+	& .fa-instagram {
+		background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);;
+		color:transparent;
+		background-clip: text;
+	}
+	& .fa-facebook {color: #3b5998;}
+	& .fa-discord {font-size:0.6em; height:1.67em; width:1.67em;background-color:#5865f2; color:white;}
+}
+
+a {
+	text-decoration: none;
+	color: var(--blue-dark);
+}
+
+.night {
+	color: white;
+	background-color: var(--bg-dark);
+
+	color-scheme: dark;
+
+	& .fa-quora {color: #ff5050;}
+	& .fa-github {color: white;}
+	& .fa-linkedin {color: rgb(111, 169, 255);}
+	& .fa-facebook {color: white; background-color: #3b5998;}
+	& img[alt='Subhranil Ghoshal'] {filter: brightness(0.75) contrast(1.5)}
+	& a {color: var(--blue-light)}
+}
+
+@media (max-width: 480px) {
+	.centered{
+		display: flex;
+		width: 100%
+	}
+}
+
+@media (prefers-reduced-motion) {
+	.App * {
+		animation: none;
+		transition-duration: 0s;
+	}
+}

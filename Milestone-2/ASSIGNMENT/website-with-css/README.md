@@ -1,0 +1,1 @@
+A portfolio site made using React(TypeScript) and Vite

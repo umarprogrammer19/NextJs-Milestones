@@ -1,0 +1,13 @@
+#notfoundPage {
+	padding: 1em;
+	& * {
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	#notfoundPage {
+		font-size: var(--large);
+		padding: 2em;
+	}
+}
