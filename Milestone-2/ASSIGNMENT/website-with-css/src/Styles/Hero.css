@@ -1,0 +1,150 @@
+.hero-section {
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(to right, #ECF2FF, #FBFCFF);
+}
+/* Text section */
+.text-section {
+    width: 60%;
+    padding: 0 32px;
+}
+.text-headline {
+    margin-bottom: 12px;
+    color: rgb(77, 75, 75);
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: .7px;
+}
+.text-title {
+    width: 500px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+}
+.text-descritpion {
+    width: 475px;
+    margin: 32px 0;
+    color: rgb(77, 75, 75);
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    letter-spacing: .7px;
+    line-height: 1.6rem;
+}
+.text-appointment-btn {
+    padding: 14px 20px;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 28px;
+    outline: transparent;
+    background-color: #1A8EFD;
+    font-size: 18px;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .8px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.text-appointment-btn:hover {
+    color: #1A8EFD;
+    background-color: transparent;
+    border: 1px solid #1A8EFD;
+}
+.text-stats {
+    margin-top: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 48px;
+}
+.text-stats-container {
+    text-align: center;
+}
+.text-stats-container > p {
+    color: rgb(77, 75, 75);
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    letter-spacing: .7px;
+}
+.text-stats-container p:first-child {
+    margin-bottom: 8px;
+    color: #1A8EFD;
+    font-family: 'Rubik', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+/* Image section */
+.hero-image-section {
+    width: 40%;
+    max-width: 100%;
+    text-align: center;
+}
+.hero-image1 {
+    width: 100%;
+    height: auto;
+}
+/* Scroll Btn */
+.scroll-up {
+    width: 45px;
+    height: 45px;
+    display: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border: 3px solid white;
+    border-radius: 50%;
+    background-color: #1A8EFD;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 24px;
+    z-index: 20;
+    cursor: pointer;
+}  
+.show-scroll {
+  display: flex;
+}
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .hero-image-section {
+        display: none;
+    }
+    .text-section {
+        width: 100%;
+        padding: 0;
+    }
+    .text-title, .text-descritpion {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .text-headline {
+        font-size: 20px;
+    }
+    .text-title {
+        font-size: 28px;
+    }
+    .text-descritpion {
+        font-size: 16px;
+    }
+    .text-appointment-btn {
+        font-size: 16px;
+    }
+    .text-stats {
+        gap: 18px;
+    }
+    .text-stats-container > p {
+        font-size: 16px;
+    }
+    .text-stats-container p:first-child {
+        font-size: 22px;
+    }
+    .scroll-up {
+        bottom: 32px;
+        right: 32px;
+    }
+}
