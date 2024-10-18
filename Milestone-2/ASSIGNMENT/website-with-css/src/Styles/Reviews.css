@@ -6,10 +6,12 @@
     gap: 24px;
     background: linear-gradient(to right, #ECF2FF, #FBFCFF);
 }
+
 /* Text */
 .rw-text-content {
     width: 100%;
 }
+
 .rw-text-title {
     margin: 16px 0;
     color: #6F7074;
@@ -18,9 +20,11 @@
     font-weight: bold;
     letter-spacing: .7px;
 }
+
 .rw-text-num {
     color: #178BFF;
 }
+
 .rw-text-desc {
     margin: 16px 0;
     color: black;
@@ -30,6 +34,7 @@
     letter-spacing: .7px;
     line-height: 2.6rem;
 }
+
 .rw-text-format {
     margin: 64px 0;
     display: flex;
@@ -37,6 +42,7 @@
     align-items: center;
     position: relative;
 }
+
 .rw-text-quote1 {
     position: absolute;
     top: -18px;
@@ -47,6 +53,7 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+
 .rw-text-quote2 {
     position: absolute;
     right: -18px;
@@ -57,6 +64,7 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+
 .rw-review {
     display: block;
     margin: 0 0 0 8px;
@@ -66,6 +74,7 @@
     letter-spacing: .7px;
     line-height: 2.2rem;
 }
+
 .rw-authors {
     margin: 0 0 0 8px;
     display: flex;
@@ -73,12 +82,14 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .rw-reviewer-name {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: .8px;
 }
+
 .rw-reviewer-place {
     margin: 6px 0 0 0;
     color: #6F7074;
@@ -87,6 +98,7 @@
     font-weight: bold;
     letter-spacing: .8px;
 }
+
 /* Buttons */
 .rw-next-btn {
     margin: 0 24px 0 0;
@@ -97,28 +109,35 @@
     font-size: 48px;
     cursor: pointer;
 }
+
 .rw-next-btn:hover {
     color: #178BFF;
 }
+
 /* Responsive */
 @media screen and (max-width: 700px) {
     .review-section {
         letter-spacing: .8px;
     }
+
     .rw-text-title {
         font-size: 22px;
     }
+
     .rw-text-desc {
         font-size: 28px;
     }
+
     .rw-review {
         font-size: 22px;
         letter-spacing: .7px;
         line-height: 1.8rem;
     }
+
     .rw-reviewer-name {
         font-size: 20px;
     }
+
     .rw-next-btn {
         margin: 0 16px 0 0;
         font-size: 40px;

@@ -1,4 +1,4 @@
-import Info from "../Components/Info";
+import Info from "../components/Info";
 
 export default function Services() {
     return <Info />
